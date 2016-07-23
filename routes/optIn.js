@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
-    res.send('respond with a resource');
+    res.status(200).send('Acceptable');
 	console.log(req.body);
 });
 
