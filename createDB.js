@@ -1,8 +1,9 @@
-var MongoClient = require('mongodb').MongoClient
-    , assert = require('assert');
+var MongoClient = require('mongodb').MongoClient,
+    f = require('util').format,
+    assert = require('assert');
 
 // Connection URL
-var url = 'mongodb://superAdmin:VfrcbvX4@localhost:27017?authMechanism=SCRAM-SHA-1&authSource=myproject';
+var url = 'mongodb://superAdmin:VfrcbvX4@localhost:27017?authMechanism=SCRAM-SHA-1&authSource=myprojectdb';
 // Use connect method to connect to the Server
 
 MongoClient.connect(url, function(err, db) {
