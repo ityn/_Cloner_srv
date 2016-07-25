@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient
 var url = 'mongodb://superAdmin:VfrcbvX4@localhost:27017?authMechanism=SCRAM-SHA-1&authSource=myproject';
 // Use connect method to connect to the Server
 
-MongoClient.connect(url, {'user': 'superAdmin', 'password': 'VfrcbvX4'},function(err, db) {
+MongoClient.connect(url, function(err, db) {
     assert.equal(null, err);
     console.log("Connected correctly to server");
 
