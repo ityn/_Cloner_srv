@@ -1,0 +1,5 @@
+{
+  "mongoose": {
+    "uri": "mongodb://UserAdmin:123@localhost:27017/myproject"
+  }
+}
