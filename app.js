@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var config = require('./config');
+var config = require('config');
 
 //var routes = require('./routes');
 //var users = require('./routes/users');
@@ -25,7 +25,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/opt', optIn);
-app.use('/', require('./routes'));
+//console.log('The test value is ' + process.env.NODE_PATH);
+app.use('/', require('routes'));
 //app.use('/users', users);
 
 // catch 404 and forward to error handler
