@@ -34,6 +34,8 @@ exports.post = function(req, res, next) {
             comment1:item.comment1,
             comment2:item.comment2,
             comment3:item.comment3,
+            comment4:item.comment4,
+            comment5:item.comment5,
             ref:item.ref,
             dt:item.dt,
             name:item.name

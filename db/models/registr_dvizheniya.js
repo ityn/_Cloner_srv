@@ -36,6 +36,8 @@ var schema = new Schema({
     comment1: {type: String, default: null},
     comment2: {type: String, default: null},
     comment3: {type: String, default: null},
+    comment4: {type: String, default: null},
+    comment5: {type: String, default: null},
     ref: {type: String, default: null},
     dt: {type: String, default: null},
     name: {type: String, default: null}
