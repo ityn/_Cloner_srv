@@ -13,6 +13,7 @@ var registr_dvizheniya = require('db/models/registr_dvizheniya').registr_dvizhen
 
 exports.post = function(req, res, next) {
     var req_body = req.body;
+    console.log(req_body);
     var arr = req_body.res_json;
     arr.forEach(function(item, i, arr) {
         //alert( i + ": " + item + " (массив:" + arr + ")" );
@@ -21,7 +22,7 @@ exports.post = function(req, res, next) {
         var date = new Date();
         date.setTime(timestamp);
         //alert( date.getHours() );
-        console.log(i + ": " + item.created_at +": " + date.toUTCString());
+        //console.log(i + ": " + item.created_at +": " + date.toUTCString());
         var reg_dvizh = new registr_dvizheniya({
             operation:item.operation,
             created_at:item.created_at,
@@ -42,7 +43,7 @@ exports.post = function(req, res, next) {
             if(err) console.log(err);
             //sndSms(reg_dvizh._id, 'Code: '+ token, false);
             //res.status(200).json({ success: reg_dvizh });
-            console.log(i + ": " + reg_dvizh );
+            console.log(reg_dvizh );
         });
         //console.log(i + ": " + data );
     });
