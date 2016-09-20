@@ -10,10 +10,10 @@ var mongoose = require('libs/mongoose'),
 //***************************************
 var schema = new Schema({
     created: {type: Date, default: Date.now},
-    user_id: {type: ObjectId, ref: 'User'},
-    email_address: {type: String},
-    text: {type: String, default: null},
-    token: {type: String, default: null}
+    email_address: {type: ObjectId, ref: 'Email'},
+    password_hash: {type: String, default: null},
+    salt: {type: String, default: null},
+    secret: {type: String, default: null}
 
 });
 
