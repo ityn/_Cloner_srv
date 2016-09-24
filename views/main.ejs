@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Wel_come to <%= title %></p>
+
+<%if(check){%>
+    <% for(var i=0; i < data.length; i++){%>
+        <tr>
+            <td></td>
+        </tr>
+    <%}%>
+<%}else{%>
+    <h1>No data</h1>
+<%}%>
+
+
+<% for (var i=0; i < pay.length; i++){%>
+<tr <%if(pay[i].ban){%>class="danger"<%}%>>
+    <td><%= i+1%></td>
+    <td><%= formatDate(pay[i].startDate)%></td>
+    <td><%= pay[i].period*30%> дн.</td>
+    <td><%= pay[i].cash%></td>
+    <td><% if (pay[i].valid){%><button title="история начислений" class="ups btn btn-primary btn-xs" data-id="<%= pay[i]._id%>"><%= pay[i].wem%></button><%} else {%><%= pay[i].wem%><%}%></td>
+    <td><%= formatDate(pay[i].endDate)%></td>
+    <td><%= Math.floor(pay[i].get('sells')*100)/100%></td>
+    <td><%= Math.floor(pay[i].get('wait')*100)/100%></td>
+    <td><%= Math.floor(pay[i].get('wemSell')/1000)*1000%> <small class="text-muted">(<%= pay[i].get('wemSell')%>)</small> </td>
+</tr>
+<%}%>
+
+</body>
+</html>
