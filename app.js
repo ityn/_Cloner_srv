@@ -9,10 +9,12 @@ var config = require('config');
 //var routes = require('./routes');
 //var users = require('./routes/users');
 //var optIn = require('./routes/optIn');
-
+var engine = require('ejs-mate');
 var app = express();
 
 // view engine setup
+// use ejs-locals for all ejs templates:
+app.engine('ejs', engine);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

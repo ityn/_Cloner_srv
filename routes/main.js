@@ -9,9 +9,11 @@ exports.get = function(req, res, next){
     reg_dvizh.find().exec(function(err, data){
         if(err) next(err);
         if(data.length > 0){
-            res.render('main',{check: true, data: data});
+            console.log('data.length: ' + data.length);
+            res.render('main',{title: 'Main true', chck: true, data: data});
         } else {
-            res.render('main',{check: false, data: null});
+            console.log('data null');
+            res.render('main',{title: 'Main null', chck: false, data: null});
         }
     });
 };
