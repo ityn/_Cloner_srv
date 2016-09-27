@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-<h1><%= title %></h1>
-<p>Wel_come to <%= title %></p>
+<% layout('layout/frontpage') -%>
+<% block('title', 'Основной отчет'); -%>
 
 <%function formatDate(date){
     var mon = (date.getMonth()+1 <10)? '0'+(date.getMonth()+1): date.getMonth()+1;
@@ -52,6 +45,3 @@
 <%}else{%>
     <h1>No data</h1>
 <%}%>
-
-</body>
-</html>

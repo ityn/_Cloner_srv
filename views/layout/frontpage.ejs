@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title class="panel-title"><%= blocks.title %></title>
+</head>
+<body>
+
+<div class="panel-default">
+    <div class="panel-heading">
+        <!-- HEADING PANEL -->
+        <%- blocks.header %>
+        <%-partial('../partials/header')%>
+    </div>
+    <div class="panel-title">
+        <!-- TITLE PANEL -->
+        <h1><%= title %></h1>
+    </div>
+    <div class="panel-body">
+        <!-- BODY PANEL -->
+        <p>Wel_come to <%= blocks.title %></p>
+        <%-body -%>
+    </div>
+</div>
+
+</body>
+</html>
+
+
