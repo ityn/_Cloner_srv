@@ -2,26 +2,26 @@
 <html>
 <head>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/dist/css/bootstrap.css' />
     <title class="panel-title"><%= blocks.title %></title>
 </head>
 <body>
 
 <div class="panel-default">
-    <div class="panel-heading">
+
+    <div class="pos-f-t">
         <!-- HEADING PANEL -->
         <%- blocks.header %>
         <%-partial('../partials/header')%>
     </div>
-    <div class="panel-title">
-        <!-- TITLE PANEL -->
-        <h1><%= title %></h1>
-    </div>
-    <div class="panel-body">
+
+    <div class="container">
         <!-- BODY PANEL -->
         <p>Wel_come to <%= blocks.title %></p>
         <%-body -%>
     </div>
+
+    <%-partial('../partials/footer')%>
 </div>
 
 </body>
